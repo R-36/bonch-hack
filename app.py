@@ -29,12 +29,16 @@ def menu():
 
 @app.route('/resto/scheme')
 def scheme2():
-    return render_template('resto_scheme.html')
+    table_cords = {
+        'table1': "10,49,68,105",
+        'table2': "12,200,107,243"
+    }
+    return render_template('resto_scheme.html', table_cords=table_cords)
 
 
-@app.route('/scheme/<table>')
-def scheme(table):
-    return render_template('table.html')
+@app.route('/resto/sheme/table<int:table_num>')
+def scheme(table_num):
+    return render_template('table.html', table_num=table_num)
 
 
 @app.route('/qr_code', methods=('GET', 'POST'))

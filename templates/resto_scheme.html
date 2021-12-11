@@ -18,19 +18,10 @@
                             <div>
                                 <img src="../static/img/scheme.jpg" alt="" class="scheme" usemap="#workmap">
                                 <map name="workmap">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="/scheme/12" class="area">
-                                    <area shape="rect" coords="12,200,107,243" alt="Table2" href="computer.htm">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="computer.htm">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="computer.htm">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="computer.htm">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="computer.htm">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="computer.htm">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="computer.htm">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="computer.htm">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="computer.htm">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="computer.htm">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="computer.htm">
-                                    <area shape="rect" coords="10,49,68,105" alt="Table1" href="computer.htm">
+                                    {% for table in table_cords %}
+                                        <area shape="rect" coords={{ table_cords[table] }} alt={{ table }} href={{ "sheme/" + table }}>
+                                    {% endfor %}
+
                                 </map>
                             </div>
                         </div>
