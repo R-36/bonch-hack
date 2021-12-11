@@ -16,13 +16,14 @@
                             <img src="/static/img/logo.png" alt="" class="logo">
                             <p class="logo_name">RestStore</p>
                             <div>
-                                <img src="../static/img/scheme.jpg" alt="" class="scheme" usemap="#workmap">
-                                <map name="workmap">
-                                    {% for table in table_cords %}
-                                        <area shape="rect" coords={{ table_cords[table] }} alt={{ table }} href={{ "sсheme/" + table }}>
-                                    {% endfor %}
-
-                                </map>
+                                <picture width="756" height="633">
+                                    <img src="../static/img/scheme.jpg" alt="" class="scheme" width="756" height="633" usemap="#workmap">
+                                    <map name="workmap">
+                                        {% for table in table_cords %}
+                                            <area shape="rect" coords={{ table_cords[table] }} alt={{ table }} href={{ "sсheme/" + table }}>
+                                        {% endfor %}
+                                    </map>
+                                </picture>
                             </div>
                         </div>
                     </div>
