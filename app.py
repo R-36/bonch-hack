@@ -2,16 +2,14 @@ from flask import Flask
 from flask import render_template, request, flash, redirect
 
 from flask_qrcode import QRcode
-from flask_googlemaps import GoogleMaps
-from flask_googlemaps import Map
+
 
 import datetime
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'azws1ex123csGGSgGsfdgnmklGFRRDCVBa9s00das'
-app.config['GOOGLEMAPS_KEY'] = "AIzaSyAJi54PgAXM-zIq3maDOy4LZFO0awKmMO4"
 QRcode(app)
-GoogleMaps(app)
+
 
 
 @app.route('/resto')
