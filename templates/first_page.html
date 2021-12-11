@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+gi
+  <div class="row row-cols-2 align-items-stretch">
+      <div class="col p-2">
+          <div class="card">
+              <img src="{{ url_for('static',filename='img/background.jpeg') }}" class="card-img-top">
+              <div class="card-body">
+                  <h5 class="card-title">Выбор ресторана</h5>
+                  <p class="card-text">Выберите ресторан из предложенного списка</p>
+                  <a href="#" class="btn btn-primary">Перейти к выбору ресторана</a>
+              </div>
+          </div>
+      </div>
+      <div class="col p-2">
+          <div class="card">
+              <img src="{{ url_for('static',filename='img/background.jpeg') }}" class="card-img-top">
+              <div class="card-body">
+                  <h5 class="card-title">Я в ресторане</h5>
+                  <p class="card-text">я тут блд</p>
+                  <a href="#" class="btn btn-primary">я в ресторане</a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+{% endblock %}
