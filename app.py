@@ -37,7 +37,7 @@ def scheme2():
         'table3': "12,200,110,245",
         'table4': "45,320,90,415",
 
-        'table5': "270,10,68,105",
+        'table5': "270,10,330,70",
         'table6': "235,135,300,190",
         'table7': "280,250,340,310",
 
@@ -97,3 +97,8 @@ def qr_cod(qr=None):
 @app.route('/map')
 def mapview():
     return render_template('maps_page.html')
+
+
+@app.route('/tips')
+def tips():
+    return render_template('tips_page.html')
