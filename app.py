@@ -5,6 +5,8 @@ from flask_qrcode import QRcode
 from flask_googlemaps import GoogleMaps
 from flask_googlemaps import Map
 
+import datetime
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'azws1ex123csGGSgGsfdgnmklGFRRDCVBa9s00das'
 app.config['GOOGLEMAPS_KEY'] = "AIzaSyAJi54PgAXM-zIq3maDOy4LZFO0awKmMO4"
@@ -36,9 +38,23 @@ def scheme2():
     return render_template('resto_scheme.html', table_cords=table_cords)
 
 
-@app.route('/resto/sheme/table<int:table_num>')
+@app.route('/resto/sсheme/table<int:table_num>')
 def scheme(table_num):
-    return render_template('table.html', table_num=table_num)
+    table = {
+        1: 2,
+        2: 4
+    }
+    date_now = datetime.datetime.now().date()
+    time_now = datetime.datetime.now().strftime('%H:%M')
+    date_stop = date_now + datetime.timedelta(365)
+
+    return render_template('table.html',
+                           table_num=table_num,
+                           date_now=date_now,
+                           date_stop=date_stop,
+                           time_now=time_now,
+                           max_people=table[table_num]
+                           )
 
 
 @app.route('/qr_code', methods=('GET', 'POST'))
