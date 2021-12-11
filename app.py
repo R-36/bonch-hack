@@ -17,7 +17,7 @@ def menu():
     return render_template('menu_page.html')
 
 
-@app.route('/qr_cod', methods=('GET', 'POST'))
+@app.route('/qr_code', methods=('GET', 'POST'))
 def qr_cod(qr=None):
     if request.method == 'POST':
         return render_template('qr_page.html', STRING_TO_ENCODE=request.form['content'])
