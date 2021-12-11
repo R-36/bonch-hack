@@ -28,8 +28,8 @@ def menu():
     return render_template('menu_page.html')
 
 
-@app.route('/resto/scheme')
-def scheme2():
+@app.route('/resto/scheme_<rest_name>')
+def scheme2(rest_name=None):
     table_cords = {
         'table1': "10,50,70,105",
         'table2': "150,55,210,110",
@@ -52,11 +52,11 @@ def scheme2():
 
 
     }
-    return render_template('resto_scheme.html', table_cords=table_cords)
+    return render_template('resto_scheme.html', table_cords=table_cords, rest_name=rest_name)
 
 
-@app.route('/resto/sсheme/table<int:table_num>')
-def scheme(table_num):
+@app.route('/resto/sсheme_<rest_name>/table<int:table_num>')
+def scheme(rest_name, table_num):
     table = {
         1: 2,
         2: 4,
@@ -78,6 +78,7 @@ def scheme(table_num):
     date_stop = date_now + datetime.timedelta(365)
 
     return render_template('table.html',
+                           rest_name=rest_name,
                            table_num=table_num,
                            date_now=date_now,
                            date_stop=date_stop,

@@ -20,7 +20,7 @@
                                     <img src="../static/img/scheme.jpg" alt="" class="scheme" width="756" height="633" usemap="#workmap">
                                     <map name="workmap">
                                         {% for table in table_cords %}
-                                            <area shape="rect" coords={{ table_cords[table] }} alt={{ table }} href={{ "sсheme/" + table }}>
+                                            <area shape="rect" coords={{ table_cords[table] }} alt={{ table }} href={{ "sсheme_" + rest_name + "/" + table  }}>
                                         {% endfor %}
                                     </map>
                                 </picture>
