@@ -67,3 +67,24 @@ a.button24:active { background: linear-gradient(#f59500, #f5ae00) #f59500; text-
 .menu_button {
     margin-top: 20px;
 }
+.scheme {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 60%;
+}
+.table{
+    align: center;
+    border: 2px solid;
+    border-image-source: linear-gradient(#F3AE0F, #E38916);
+    border-image-slice: 1;
+    background-color: white;
+}
+.table-element {
+    border: 1px solid black;
+}
+
+.area{
+    color: red;
+}

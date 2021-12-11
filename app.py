@@ -22,6 +22,16 @@ def menu():
     return render_template('menu_page.html')
 
 
+@app.route('/resto/scheme')
+def scheme2():
+    return render_template('resto_scheme.html')
+
+
+@app.route('/scheme/<table>')
+def scheme(table):
+    return render_template('table.html')
+
+
 @app.route('/qr_code', methods=('GET', 'POST'))
 def qr_cod(qr=None):
     if request.method == 'POST':

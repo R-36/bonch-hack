@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 background min-vh-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 box min-vh-100">
+                            <img src="/static/img/logo.png" alt="" class="logo">
+                            <p class="logo_name">RestStore</p>
+                            <div class="table-box col-6 offset-3">
+                                <table class="table col-7">
+                                    <tbody>
+                                        <tr>
+                                            <td class="table-element">Ресторан</td>
+                                            <td class="table-element">Одуванчик</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-element">Дата</td>
+                                            <td class="table-element">11.12.2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-element">Время</td>
+                                            <td class="table-element">12</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-element">Номер столика</td>
+                                            <td class="table-element">12</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-element">Номер столика</td>
+                                            <td class="table-element">12</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row justify-content-center">
+                                <a href="/resto/scheme" class="button24 col-3">Назад</a>
+                                <a href="/resto" class="button24 col-3 ">Забронировать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
