@@ -1,0 +1,16 @@
+{% extends 'template.html' %}
+
+{% block content %}
+<form method="post">
+    <div class="input-group">
+        <textarea name="content" placeholder="Text to convert"
+                  class="form-control">{{ request.form['content'] }}</textarea>
+        <button type="submit" class="btn btn-outline-secondary">Convert</button>
+    </div>
+</form>
+
+<div class="text-center">
+    <img src="{{ qrcode(STRING_TO_ENCODE, icon_img='img/logo_qr.png', error_correction='H') }}" class="img-fluid p-5" alt="...">
+</div>
+
+{% endblock %}

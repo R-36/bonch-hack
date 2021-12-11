@@ -1,28 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-gi
-  <div class="row row-cols-2 align-items-stretch">
-      <div class="col p-2">
-          <div class="card">
-              <img src="{{ url_for('static',filename='img/background.jpeg') }}" class="card-img-top">
-              <div class="card-body">
-                  <h5 class="card-title">Выбор ресторана</h5>
-                  <p class="card-text">Выберите ресторан из предложенного списка</p>
-                  <a href="#" class="btn btn-primary">Перейти к выбору ресторана</a>
-              </div>
-          </div>
-      </div>
-      <div class="col p-2">
-          <div class="card">
-              <img src="{{ url_for('static',filename='img/background.jpeg') }}" class="card-img-top">
-              <div class="card-body">
-                  <h5 class="card-title">Я в ресторане</h5>
-                  <p class="card-text">я тут блд</p>
-                  <a href="#" class="btn btn-primary">я в ресторане</a>
-              </div>
-          </div>
-      </div>
-  </div>
+<div class="row row-cols-2 align-items-stretch bg-info">
+    <div class="col p-2">
+        <div class="card h-100 bg-secondary text-center">
+            <img class="card-img-top" src="{{ url_for('static',filename='img/background.jpeg') }}">
+            <div class="card-body">
+                <h5 class="card-title">Выбор ресторана</h5>
+                <p class="card-text">Предварительное бронирование столика в ресторане, кафе, баре или клубе –
+                    распространенная мировая практика, которая позволяет посетителям заранее спланировать свое время и
+                    не тратить его на ожидание свободных мест. Особенно это актуально, если вы собираетесь посетить
+                    модный ресторан, попасть в который стремятся многие. Бронь или заказ столика - залог успешной
+                    деловой встречи, семейного ужина или романтического свидания, которые вам не испортят слова "Мест
+                    нет".</p>
+                <a class="btn btn-primary" href="#">Перейти к выбору ресторана</a>
+            </div>
+        </div>
+    </div>
+    <div class="col p-2">
+        <div class="card h-100 bg-secondary text-center">
+            <img class="card-img-top" src="{{ url_for('static',filename='img/background.jpeg') }}">
+            <div class="card-body">
+                <h5 class="card-title">Я в ресторане</h5>
+                <p class="card-text">я тут блд</p>
+                <a class="btn btn-primary" href="#">Перейти к выбору столика</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
