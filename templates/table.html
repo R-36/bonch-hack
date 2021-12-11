@@ -22,22 +22,54 @@
                                             <td class="table-element">Ресторан</td>
                                             <td class="table-element">Одуванчик</td>
                                         </tr>
+
                                         <tr>
                                             <td class="table-element">Дата</td>
-                                            <td class="table-element">11.12.2021</td>
+                                            <td class="table-element">
+                                                <form>
+                                                    <div>
+                                                        <input id="party" value={{ date_now }} max={{ date_stop }} min={{ date_now }} name="party"
+                                                               type="date">
+                                                    </div>
+                                                </form>
+                                            </td>
                                         </tr>
+
                                         <tr>
                                             <td class="table-element">Время</td>
-                                            <td class="table-element">12</td>
+                                            <td class="table-element">
+                                                <form>
+                                                    <div>
+                                                        <input type="time" name="cron" value={{ time_now }} min={{ time_now }}>
+                                                    </div>
+                                                </form>
+                                            </td>
                                         </tr>
+
+
+                                        <tr>
+                                            <td class="table-element">Количество гостей</td>
+                                            <td class="table-element">
+                                                <form>
+                                                    <div>
+                                                        <select aria-label=".form-select-sm example"
+                                                                class="form-select form-select-sm">
+                                                            <option selected>Количество гостей</option>
+                                                            {% for i in range(1, max_people + 1) %}
+                                                                <option value={{ i }}>{{ i }}</option>
+                                                            {% endfor %}
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+
                                         <tr>
                                             <td class="table-element">Номер столика</td>
                                             <td class="table-element">{{ table_num }}</td>
                                         </tr>
-                                        <tr>
-                                            <td class="table-element">Номер столика</td>
-                                            <td class="table-element">12</td>
-                                        </tr>
+
+
                                     </tbody>
                                 </table>
                             </div>
