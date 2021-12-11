@@ -9,6 +9,7 @@ import datetime
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'azws1ex123csGGSgGsfdgnmklGFRRDCVBa9s00das'
+
 QRcode(app)
 
 

@@ -30,6 +30,7 @@
     <script type="text/javascript">
         // The first parameter are the coordinates of the center of the map
         // The second parameter is the zoom level
+        var L = window.L;
         var map = L.map('map').setView([60.08240, 30.34310], 15);
         L.marker([60.081313646300465, 30.341303827649863]).addTo(map).bindPopup("<strong>Евро Кебаб</strong> </br><a type='button' href='/resto/scheme_evrokebab'><button>Выбрать</button></a>", {'className': "popup"}).openPopup();
         L.marker([60.080754438409926, 30.34084785212282]).addTo(map).bindPopup("<strong>Dodo Pizza</strong> </br><a type='button' href='/resto/scheme_dodopizza'><button>Выбрать</button></a>", {'className': "popup"}).openPopup();
