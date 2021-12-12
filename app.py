@@ -107,3 +107,7 @@ def mapview():
 @app.route('/tips')
 def tips():
     return render_template('tips_page.html')
+
+@app.route('/pay')
+def pay():
+    return render_template('pay_page.html')
