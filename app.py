@@ -192,7 +192,6 @@ def pay():
             sum_pizza += int(menu_elements[pizza][2]) * int(request.cookies.get(pizza))
 
     if request.method == 'POST':
-        print(request.form['paybtn'])
         if request.form['paybtn'] == "Pay":
             res = make_response(render_template('pay_page.html', sum_pizza="0", order_list={}))
             for pizza in menu_elements:
