@@ -15,7 +15,11 @@
                         <h5 class="card-title">{{ menu_elements[card][1] }}</h5>
                         <h4 class="card-title">{{ menu_elements[card][2] + ' Р' }}</h4>
                         <p class="card-text">{{ menu_elements[card][3] }}</p>
-                        <a href="#" class="btn btn-primary">Заказать</a>
+                        <form method="post">
+                            <div class="input-group">
+                                <button type="submit" name="orderbtn" class="btn btn-outline-secondary" value={{ card }}>Заказать</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
