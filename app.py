@@ -41,7 +41,7 @@ def menu():
                      'pizza13': ['pizza13.png', 'Супер Мясная', '789', 'Соус Болоньезе, сыр Моцарелла, ветчина, бекон, пепперони, свинина, говядина'],
                      'pizza14': ['pizza14.jpg', 'Маргарита', '509', 'Томатный соус, сыр Моцарелла, помидоры'],
                      'pizza15': ['pizza15.jpg', 'Куриная Барбекю', '729', 'Соус Барбекю, бекон, курица, красный лук, сладкий перец, грибы, сыр моцарелла, жареный лук']}
-    return render_template('menu_page.html')
+    return render_template('menu_page.html', menu_elements=menu_elements)
 
 
 @app.route('/resto/scheme_<rest_name>')
