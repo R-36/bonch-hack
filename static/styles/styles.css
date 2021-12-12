@@ -102,3 +102,14 @@ a.button24:active { background: linear-gradient(#f59500, #f5ae00) #f59500; text-
     background-color: blue;
     color: white;
 }
+.card-box {
+    min-height: 250px;
+}
+.btn-primary {
+    position: absolute;
+    bottom: 20px;
+}
+.main-card-box {
+    margin-left: auto;
+    margin-right: auto;
+}
