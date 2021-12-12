@@ -1,12 +1,12 @@
 {% extends 'template.html' %}
 
 {% block content %}
-<div class="row row-cols-2 g-2 main-card-box">
+<div class="row row-cols-2 g-3 py-2 main-card-box align-items-center">
 
     {% for card in menu_elements %}
-    <div class="col-6 center-block">
-        <div class="card" style="max-width: 540px;">
-            <div class="row card-box">
+    <div class="col d-flex justify-content-center">
+        <div class="card d-flex justify-content-center" style="max-width: 540px;">
+            <div class="row card-box ">
                 <div class="col-4">
                     <img alt="..." class="img-fluid rounded-start p-2" src="{{ url_for('static',filename='img/' + menu_elements[card][0]) }}">
                 </div>
@@ -17,7 +17,7 @@
                         <p class="card-text">{{ menu_elements[card][3] }}</p>
                         <form method="post">
                             <div class="input-group">
-                                <button type="submit" name="orderbtn" class="btn btn-outline-secondary" value={{ card }}>Заказать</button>
+                                <button type="submit" name="orderbtn" class="btn btn-outline-secondary" value={{ card }}>Добавить</button>
                             </div>
                         </form>
                     </div>
@@ -26,6 +26,12 @@
         </div>
     </div>
     {% endfor %}
+
+    <div>
+        <a href="/resto" class="button24 col-6 align-self-center offset-3 menu_button">Готово</a>
+    </div>
+
+
 
 </div>
 {% endblock %}
