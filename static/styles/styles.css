@@ -113,3 +113,25 @@ a.button24:active { background: linear-gradient(#f59500, #f5ae00) #f59500; text-
     margin-left: auto;
     margin-right: auto;
 }
+.ofik-page {
+    margin-bottom: 1000px;
+}
+.button24 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align:center;
+    color: white;
+    text-decoration: none;
+    padding: .9em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 15px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    transition: 0.2s;
+    text-decoration: none
+    font-color: white;
+}
+.button24:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00; color: white}
+.button24:active { background: linear-gradient(#f59500, #f5ae00) #f59500; text-decoration: none}

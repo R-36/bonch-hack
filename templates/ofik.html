@@ -1,0 +1,21 @@
+{% extends 'template.html' %}
+
+
+{% block content %}
+    <div class="col py-5">
+        <div class="card" >
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <img alt="..." class="img-fluid rounded-start p-2" src="{{ url_for('static',filename='img/ofik.jpeg') }}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body h-100">
+
+                        <h5 class="card-title col-6 align-self-start offset-3 ofik-page">Официант Александр сейчас подойдёт</h5>
+                        <a href="/resto" class="button24 col-6 align-self-start offset-3 menu_button map-button">Хорошо</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
