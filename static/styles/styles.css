@@ -120,7 +120,7 @@ a.button24:active { background: linear-gradient(#f59500, #f5ae00) #f59500; text-
     font-size: 25px;
     font-weight: bold;
     text-align:center;
-    color: white;
+    color: white !important;
     text-decoration: none;
     padding: .9em 2em;
     outline: none;

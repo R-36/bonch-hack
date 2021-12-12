@@ -1,7 +1,9 @@
 {% extends 'template.html' %}
 
 {% block content %}
-<div class="row row-cols-2 g-3 py-2 main-card-box align-items-center">
+<img src="/static/img/logo.png" alt="" class="logo">
+<p class="logo_name">RestStore</p>
+<div class="row row-cols-2 g-3 py-2 main-card-box align-items-center border-top">
 
     {% for card in menu_elements %}
     <div class="col d-flex justify-content-center">
@@ -17,7 +19,7 @@
                         <p class="card-text">{{ menu_elements[card][3] }}</p>
                         <form method="post">
                             <div class="input-group">
-                                <button type="submit" name="orderbtn" class="btn btn-outline-secondary button24" value={{ card }}>Заказать</button>
+                                <button type="submit" name="orderbtn" class="btn button24" value={{ card }}>Заказать</button>
                             </div>
                         </form>
                     </div>
