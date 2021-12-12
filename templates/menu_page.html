@@ -1,19 +1,20 @@
 {% extends 'template.html' %}
 
 {% block content %}
-<div class="row row-cols-3 g-3">
+<div class="row row-cols-2 g-3">
 
-    {% for card in range(50) %}
+    {% for card in menu_elements %}
     <div class="col">
         <div class="card" style="max-width: 540px;">
             <div class="row">
                 <div class="col-md-4">
-                    <img alt="..." class="img-fluid rounded-start p-2" src="{{ url_for('static',filename='img/pizza1.png') }}">
+                    <img alt="..." class="img-fluid rounded-start p-2" src="{{ url_for('static',filename='img/' + menu_elements[card][0]) }}">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body h-100">
-                        <h5 class="card-title">Блюдо</h5>
-                        <p class="card-text">Поставьте кастрюлю на медленный огонь и доведите до кипения мёд, сливочное масло, измельчённый чеснок и паприку. Готовьте ещё 1–2 минуты, периодически помешивая. Соус должен немного загустеть. Полейте им крылышки и запекайте их ещё 5 минут, пока они не подрумянятся.</p>
+                        <h5 class="card-title">{{ menu_elements[card][1] }}</h5>
+                        <h4 class="card-title">{{ menu_elements[card][2] + ' Р' }}</h4>
+                        <p class="card-text">{{ menu_elements[card][3] }}</p>
                         <a href="#" class="btn btn-primary">Заказать</a>
                     </div>
                 </div>
