@@ -143,6 +143,16 @@ def tips():
     return render_template('tips_page.html')
 
 
+@app.route('/ofik')
+def ofik():
+    return render_template('ofik.html')
+
+
+@app.route('/manager')
+def manager():
+    return render_template('manager.html')
+
+
 @app.route('/pay', methods=('GET', 'POST'))
 def pay():
     menu_elements = {'pizza1': ['pizza1.png', 'Пицца Хэппи Хат', '529',
