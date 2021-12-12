@@ -184,17 +184,20 @@ def pay():
                                  'Соус Барбекю, бекон, курица, красный лук, сладкий перец, грибы, сыр моцарелла, жареный лук']}
 
     sum_pizza = 0
+    order_list = {}
+
     for pizza in menu_elements:
         if request.cookies.get(pizza):
+            order_list[menu_elements[pizza][1]] = [int(menu_elements[pizza][2]), int(request.cookies.get(pizza))]
             sum_pizza += int(menu_elements[pizza][2]) * int(request.cookies.get(pizza))
 
     if request.method == 'POST':
         print(request.form['paybtn'])
         if request.form['paybtn'] == "Pay":
-            res = make_response(render_template('pay_page.html', sum_pizza="0"))
+            res = make_response(render_template('pay_page.html', sum_pizza="0", order_list={}))
             for pizza in menu_elements:
                 if request.cookies.get(pizza):
                     res.set_cookie(pizza, '0', max_age=0)
             return res
 
-    return render_template('pay_page.html', sum_pizza=str(sum_pizza))
+    return render_template('pay_page.html', sum_pizza=str(sum_pizza), order_list=order_list)
